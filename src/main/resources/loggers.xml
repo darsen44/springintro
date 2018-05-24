@@ -7,9 +7,9 @@
         http://www.springframework.org/schema/util
         http://www.springframework.org/schema/util/spring-util-3.2.xsd" >
 
-    <bean id="eventConsole" class="event.loger.ConsoleEventLoger"/>
+    <!---<bean id="eventConsole" class="event.loger.ConsoleEventLoger"/>-->
 
-    <bean id="event" class="event.Event" scope="prototype">
+    <!--<bean id="event" class="event.Event" scope="prototype">
 
         <constructor-arg index="0">
             <bean class="java.util.Date"/>
@@ -19,15 +19,15 @@
             <bean class="java.text.DateFormat"
                   factory-method="getDateTimeInstance"/>
         </constructor-arg>
-    </bean>
+    </bean>-->
 
-    <bean id="eventFile" class="event.loger.FileEventLoger"
-          p:fileName="text.txt" init-method="init"/>
+    <!--<bean id="eventFile" class="event.loger.FileEventLoger"
+          p:fileName="text.txt" init-method="init"/>-->
 
-    <bean id="eventFileCache" class="event.loger.CacheFileEventLoger"
+    <!--<bean id="eventFileCache" class="event.loger.CacheFileEventLoger"
           parent="eventFile" destroy-method="destroy">
         <constructor-arg value="20"/>
-    </bean>
+    </bean>-->
 
     <bean id="combineLoger" class="event.loger.CombineEventLoger">
         <constructor-arg>

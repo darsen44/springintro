@@ -1,15 +1,21 @@
 package event;
 
 import lombok.*;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Scope;
+import org.springframework.stereotype.Component;
 
 import java.text.DateFormat;
 import java.util.Date;
+@Component
+@Scope("prototype")
 public class Event {
     private int id = (int) (Math.random()*100);
-    @Setter
-    @Getter
-    private String msg;
+
+    @Autowired
     private Date date;
+
+    @Autowired
     private DateFormat df;
 
     public Event(Date date, DateFormat df) {
@@ -21,7 +27,6 @@ public class Event {
     public String toString() {
         return "Event{" +
                 "id=" + id +
-                ", msg='" + msg + '\'' +
                 ", date=" + df.format(date) +
                 '}';
     }

@@ -1,2 +1,4 @@
 id = 1
 fullName = "Pep"
+fileName = "text.txt"
+cacheSize = 20

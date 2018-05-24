@@ -1,17 +1,19 @@
 package event.loger;
 
 import event.Event;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 
 public class CombineEventLoger implements EventLoger{
-    private List<EventLoger> loggers = new ArrayList<>();;
 
-    public CombineEventLoger(List<EventLoger> loggers) {
-        this.loggers = loggers;
-    }
+    @Autowired
+    @Qualifier("combinedLoggers")
+    private Collection<EventLoger> loggers;
 
     @Override
     public void logEvent(Event event) throws IOException {
