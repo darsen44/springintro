@@ -10,7 +10,7 @@ import java.text.DateFormat;
 import java.util.Date;
 
 @Configuration
-@PropertySource("classpath:client.properties")
+@PropertySource("classpath:client.property")
 public class AppConfig {
 
     @Value("${id}")

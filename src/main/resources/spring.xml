@@ -7,9 +7,13 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
 
         http://www.springframework.org/schema/util
-        http://www.springframework.org/schema/util/spring-util-3.2.xsd">
+        http://www.springframework.org/schema/util/spring-util-3.2.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-util-3.2.xsd">
 
-    <import resource="loggers.xml"/>
+    <context:annotation-config/>
+
+   <!-- <import resource="loggers.xml"/>
 
     <util:map id="loggerMap">
         <entry key="INFO"
@@ -22,6 +26,6 @@
         <constructor-arg index="0" ref="client"/>
         <constructor-arg> <ref bean="loggerMap"/></constructor-arg>
         <constructor-arg index="2" ref="event"/>
-    </bean>
+    </bean>-->
 
 </beans>

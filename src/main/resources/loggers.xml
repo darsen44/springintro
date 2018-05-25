@@ -29,13 +29,13 @@
         <constructor-arg value="20"/>
     </bean>-->
 
-    <bean id="combineLoger" class="event.loger.CombineEventLoger">
+    <!--<bean id="combineLoger" class="event.loger.CombineEventLoger">
         <constructor-arg>
             <list>
                 <ref bean="eventFileCache"/>
                 <ref bean="eventConsole"/>
             </list>
         </constructor-arg>
-    </bean>
+    </bean>-->
 
 </beans>
